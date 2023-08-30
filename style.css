@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 
 :root {
   /* COLOR *
@@ -18,14 +18,12 @@
 - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) 
 */
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-
 
 html {
   font-size: 62.5%;
@@ -33,21 +31,25 @@ html {
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .image-logo {
-    min-height: 40px;
-    width: 20%;
-    background: url(./images/logo.svg) no-repeat center center / contain;
-    align-self: flex-start;
-    margin: 20px 10%;
-    margin-left: 10%;
+  min-height: 40px;
+  width: 20%;
+  background: url(./images/logo.svg) no-repeat center center / contain;
+  align-self: flex-start;
+  margin: 20px 10%;
+  margin-left: 10%;
+}
+
+.hero-image-section {
+  width: 100%;
 }
 
 .image-hero-mobile {
@@ -55,6 +57,12 @@ body {
   max-width: 900px;
   margin-bottom: 50px;
   user-select: none;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -75,7 +83,7 @@ span {
 
 p {
   max-width: 600px;
-  font-size: 1.49rem;
+  font-size: min(3.9vw, 2rem);
   margin: 0 7%;
   line-height: 2.1rem;
   color: var(--desaturated-red);
@@ -94,17 +102,16 @@ p {
 #email-input {
   width: 100%;
   color: var(--desaturated-red);
-  height: 100%;
   border: 1px solid var(--desaturated-red);
   border-radius: 25px;
-  position: relative; 
+  position: relative;
   z-index: 1;
   padding-left: 25px;
 }
 
 #email-input::placeholder {
-  color:  var(--desaturated-red);
-  font-size: 1.49rem; 
+  color: var(--desaturated-red);
+  font-size: 1.49rem;
   font-family: var(--ff-josefin-sans);
 }
 
@@ -129,7 +136,55 @@ p {
   color: var(--dark-grayish-red);
 }
 
+@media (min-width: 1100px) {
 
-@media (min-width: 1000px) {
+  body {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    max-height: 700px;
+  }
+
+  .image-logo {
+    /* display: none; */
+    position: absolute;
+    left: 0px;
+    margin: 35px 6%;
+  }
+
+  .text-section {
+
+    width: 460px;
+    margin-right: 50%;
+    text-align: left;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 1.7rem;
+  }
+
+
+  .email-section {
+    width: 100%;
+  }
+
+  .hero-image-section {
+    margin: unset;
+    height: 100%;
+    width: auto;
+
+  }
+
+  .image-hero-mobile {
+    content: url(./images/hero-desktop.jpg);
+    margin: unset;
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    right: 0px;
+  }
+
 
 }
